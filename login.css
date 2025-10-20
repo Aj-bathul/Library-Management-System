@@ -1,0 +1,160 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+}
+
+.main-container {
+  display: flex;
+  width: 90%;
+  max-width: 1000px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.left-container {
+  flex: 1;
+  background: linear-gradient(135deg, #ffffff, #16a085);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.library-image {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.library-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.right-container {
+  flex: 1;
+  padding: 3rem;
+}
+
+.login-container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #1abc9c;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.subtitle {
+  color: #666;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.login-form {
+  margin-top: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #444;
+  font-size: 0.9rem;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: #f8f9fa;
+}
+
+.login-form input:focus {
+  border-color: #1abc9c;
+  outline: none;
+  background-color: white;
+  box-shadow: 0 0 0 3px rgba(26, 188, 156, 0.1);
+}
+
+.btn {
+  background-color: #1abc9c;
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.btn:hover {
+  background-color: #16a085;
+}
+
+.terms {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #999;
+  margin-top: 2rem;
+}
+
+.terms a {
+  color: #666;
+  text-decoration: none;
+}
+
+.terms a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 800px) {
+  .main-container {
+    flex-direction: column;
+  }
+  
+  .left-container {
+    display: none; /* Hide image on mobile */
+  }
+  
+  .right-container {
+    padding: 2rem;
+  }
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Welcome to ABC Library</title>
+  <link rel="stylesheet" href="index.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <section class="carousel">
+  <img src="libimage1.jpg" alt="Library 1" class="carousel-image active" />
+  <img src="libimage.jpg" alt="Library 2" class="carousel-image" />
+  
+  <div class="overlay"></div>
+
+  <div class="carousel-content">
+    <h1>📚 Welcome to KnowledgeNest Library</h1>
+    <p>Your gateway to knowledge</p>
+    <a href="login.php" class="icon-login">
+      <i class="fas fa-user"></i> Browse
+    </a>
+  </div>
+
+  <footer class="carousel-footer">
+  <p>&copy; 2025 KnowledgeNest Library Management System | 
+     <a href="about.html">About</a> | 
+     <a href="about.html">Contact</a>
+  </p>
+</footer>
+
+</section>
+
+
+  <script>
+
+
+let index = 0;
+const slides = document.querySelectorAll(".carousel-image");
+
+setInterval(() => {
+  slides[index].classList.remove("active");
+  index = (index + 1) % slides.length;
+  slides[index].classList.add("active");
+}, 3500);
+
+  </script>
+</body>
+</html>

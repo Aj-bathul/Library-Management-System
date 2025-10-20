@@ -1,0 +1,202 @@
+/* Base styles */
+* { 
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background-color: #364156;
+  padding: 20px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow-y: auto;
+}
+
+.sidebar-header h2 {
+  color: #1abc9c;
+  font-size: 24px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-item.active {
+  background-color: #1abc9c;  /* mint-green highlight */
+  color: white;
+  font-weight: bold;
+}
+
+.menu .menu-item {
+  display: block;
+  color: #f0f0f0;
+  padding: 12px 10px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.menu .menu-item:hover {
+  background-color: #1abc9c;
+  color: #fff;
+}
+
+.menu .logout {
+  color: #e74c3c;
+}
+
+.menu .logout:hover {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+/* Container and main content */
+.container {
+  margin-left: 220px;
+  padding: 40px;
+  background: #ffffff;
+  min-height: 100vh;
+}
+
+.main-content h1 {
+  text-align: center;
+  color: #1abc9c;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+/* Form styling */
+#memberFormContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 30px;
+  margin-bottom: 40px;
+}
+
+#memberFormContainer label {
+  font-weight: bold;
+  color: #34495e;
+}
+
+#memberFormContainer input,
+#memberFormContainer select {
+  padding: 10px;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  font-size: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #fdfdfd;
+}
+
+#saveMemberBtn {
+  grid-column: 1 / -1;
+  background-color: #1abc9c;
+  color: white;
+  border: none;
+  padding: 14px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+#saveMemberBtn:hover {
+  background-color: #16a085;
+}
+
+/* Search section */
+.search-section {
+  margin-bottom: 20px;
+}
+
+.search-controls {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.search-controls input,
+.search-controls select,
+.search-controls button {
+  padding: 10px;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  font-size: 15px;
+  background-color: #fdfdfd;
+}
+
+.search-controls button {
+  background-color: #1abc9c;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.search-controls button:hover {
+  background-color: #16a085;
+}
+
+/* Table styling */
+#membersTable {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+#membersTable th,
+#membersTable td {
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  text-align: left;
+  font-size: 14px;
+}
+
+#membersTable th {
+  background-color: #34495e;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+#membersTable td {
+  background-color: #ffffff;
+}
+
+#membersTable tr:nth-child(even) td {
+  background-color: #f8f9fa;
+}
+
+/* Table buttons */
+#membersTable button {
+  padding: 6px 12px;
+  font-size: 13px;
+  margin-right: 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+#membersTable button:hover {
+  opacity: 0.95;
+}
+
+#membersTable button.edit-btn {
+  background-color: #3498db;
+  color: white;
+}
+
+#membersTable button.delete-btn {
+  background-color: #e74c3c;
+  color: white;
+}

@@ -1,0 +1,124 @@
+/* Reset and basics */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f6fa;
+  color: #333;
+  overflow-y: scroll; /* always show scrollbar for smoother UI */
+}
+
+/* Layout container */
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background-color: #364156;
+  padding: 20px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow-y: auto;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  z-index: 100;
+}
+
+.sidebar-header h2 {
+  color: #1abc9c;
+  font-size: 24px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-item.active {
+  background-color: #1abc9c;  /* mint-green highlight */
+  color: white;
+  font-weight: bold;
+}
+
+.menu .menu-item {
+  display: block;
+  color: #f0f0f0;
+  padding: 12px 10px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.menu .menu-item:hover {
+  background-color: #1abc9c;
+  color: #fff;
+}
+
+.menu .logout {
+  color: #e74c3c;
+}
+
+.menu .logout:hover {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+/* Main content */
+.main-content {
+  flex: 1;
+  padding: 40px;
+  background-color: #ffffff;
+
+  /* offset for sidebar */
+  margin-left: 220px;
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+.main-content h1 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #2c3e50;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+table thead {
+  background-color: #2c3e50;
+  color: white;
+}
+
+table th,
+table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+  vertical-align: top;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+table tbody tr:hover {
+  background-color: #f1f1f1;
+}

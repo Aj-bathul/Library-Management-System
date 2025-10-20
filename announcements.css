@@ -1,0 +1,222 @@
+/* Reset and body */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f5f5;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  color: #f0f0f0;
+}
+
+/* Sidebar styling */
+.sidebar {
+  width: 220px;
+  background-color: #364156; /* mint-black */
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  overflow-y: auto;
+  color: #f0f0f0;
+}
+
+.sidebar-header h2 {
+  color: #1abc9c;
+  font-size: 24px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.menu .menu-item {
+  display: block;
+  color: #f0f0f0;
+  padding: 12px 10px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.menu .menu-item:hover,
+.menu .menu-item.active {
+  background-color: #1abc9c;
+  color: #fff;
+}
+
+.menu .logout {
+  color: #e74c3c;
+}
+
+.menu .logout:hover {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+
+
+/* Main content container */
+.main-content {
+  margin-left: 220px;      /* shift right after sidebar */
+  padding: 2rem 2rem 3rem;
+  margin-top: 72px;        /* space for fixed header */
+  background-color: #000000; /* same as sidebar */
+  min-height: calc(100vh - 72px);
+  color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* Section inside main content */
+.announcement-section {
+  width: 100%;
+  max-width: 900px;
+}
+
+/* Headings */
+h2 {
+  color: #1abc9c;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #1abc9c;
+  padding-bottom: 0.3rem;
+}
+.container {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 10px;
+  max-width: 700px;
+  margin: 40px auto;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.section-title {
+  color: #1abc9c;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.announcement-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.announcement-form input[type="text"],
+.announcement-form input[type="date"],
+.announcement-form textarea {
+  width: 100%;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  border: 1.5px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.announcement-form input[type="text"]:focus,
+.announcement-form input[type="date"]:focus,
+.announcement-form textarea:focus {
+  border-color: #1abc9c;
+  outline: none;
+}
+
+.btn-primary {
+  background-color: #1abc9c;
+  border: none;
+  padding: 12px 25px;
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #16a085;
+}
+
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff; /* same as form */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  color: #000000;
+}
+
+th, td {
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid #536182;
+  text-align: left;
+}
+
+th {
+  background: #42506e;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+tr:hover {
+  background: #1e1e1e33;
+}
+
+/* Delete button */
+.delete-btn {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+  background: #c0392b;
+}
+
+/* Delete button */
+.edit-btn {
+  background: #58d5f1;
+  color: white;
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.edit-btn:hover {
+  background: #58d5f1;
+}
+/* Scrollbar for sidebar */
+.sidebar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: #1abc9c;
+  border-radius: 4px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background-color: #2c3648;
+}
+ .announcements-table, 
+    .announcements-table th, 
+    .announcements-table td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }

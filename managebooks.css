@@ -1,0 +1,179 @@
+/* Reset & box-sizing */
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background-color: #364156; /* mint-black */
+  padding: 20px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow-y: auto;
+}
+
+.sidebar-header h2 {
+  color: #1abc9c;
+  font-size: 24px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu .menu-item {
+  display: block;
+  color: #f0f0f0;
+  padding: 12px 10px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+/* Hover effect for menu items */
+.menu .menu-item:hover {
+  background-color: #1abc9c;
+  color: #fff;
+}
+
+
+
+.menu .menu-item.active {
+  background-color: #1abc9c;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Logout item */
+.menu .logout {
+  color: #e74c3c;
+}
+
+.menu .logout:hover {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+/* Form container - two column layout */
+#bookForm {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto 3rem auto;
+  background: #fdfeff;
+  padding: 1.5rem 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  color: #000;
+}
+
+.form-column {
+  flex: 1 1 45%; /* two roughly equal columns */
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+  color: #000;
+}
+
+input, select {
+  padding: 0.6rem;
+  border: 1.5px solid #555;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus {
+  border-color: #1abc9c;
+  outline: none;
+}
+
+/* Submit button styling */
+button[type="submit"] {
+  background-color: #1abc9c;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.4rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  max-width: 250px;
+  margin: 1rem auto 0 auto; /* Center horizontally */
+  display: block;
+}
+
+button[type="submit"]:hover {
+  background-color: #16a085;
+}
+
+/* Wrapper for buttons if needed */
+.button-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+/* Table styling */
+#booksTable {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto 3rem auto; /* match form bottom margin */
+  border-collapse: collapse;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#booksTable th, #booksTable td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #555;
+  font-size: 0.9rem;
+}
+
+#booksTable th {
+  background-color: #1abc9c;
+  color: #fff;
+}
+
+/* Buttons inside table */
+#booksTable td button {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 4px;
+  margin-right: 1.5rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  background-color: #3498db;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+#booksTable td button:hover {
+  background-color: #2980b9;
+}
+
+/* Delete button style */
+#booksTable td .delete-btn {
+  background-color: #e74c3c;
+}
+
+#booksTable td .delete-btn:hover {
+  background-color: #c0392b;
+}

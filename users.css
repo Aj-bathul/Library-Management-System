@@ -1,0 +1,131 @@
+/* Reset & base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  color: #333;
+}
+.container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background-color: #364156;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.sidebar-header h2 {
+  color: #1abc9c;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.menu {
+  flex-grow: 1;
+}
+.menu-item {
+  display: flex;
+  align-items: center;
+  color: #ddd;
+  padding: 12px;
+  margin-bottom: 8px;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+.menu-item i {
+  margin-right: 10px;
+}
+.menu-item.active,
+.menu-item:hover {
+  background-color: #1abc9c;
+  color: #fff;
+}
+.menu-item.logout {
+  margin-top: auto;
+  color: #e74c3c;
+}
+.menu-item.logout:hover {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  overflow-y: auto;
+  background-color: #f9f9f9;
+}
+.top-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid #ddd;
+}
+.top-header h1 {
+  color: #364156;
+}
+
+/* Dashboard Grid */
+.dashboard-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 2rem;
+}
+
+/* Cards */
+.dashboard-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.dashboard-card h2 {
+  color: #364156;
+  margin-bottom: 1rem;
+}
+
+/* Buttons */
+.btn {
+  background-color: #1abc9c;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 1rem;
+}
+.btn:hover {
+  background-color: #16a085;
+}
+.btn-outline {
+  background: transparent;
+  color: #364156;
+  border: 2px solid #364156;
+  margin-left: 0.5rem;
+}
+.btn-outline:hover {
+  background-color: #364156;
+  color: #fff;
+}
+
+/* Tables */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+.data-table th,
+.data-table td {
+  padding: 0.6rem;
+  border: 1px solid #ddd;
+  text-align: left;
+}
